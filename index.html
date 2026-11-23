@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Параллельная загрузка карточек из DummyJSON.">
+  <title>Карточки пользователей</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Карточки пользователей</h1>
+      <h4 id="login">makschocomint</h4>
+    </header>
+    <div class="toolbar">
+      <output id="summary" data-state="loading">Загрузка...</output>
+      <button id="cancel" type="button">Отменить запросы</button>
+    </div>
+    <section id="users" class="users" aria-label="Пользователи" aria-busy="true"></section>
+  </main>
+</body>
+</html>
