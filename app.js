@@ -12,10 +12,10 @@ function readParameters() {
   const ids = (params.get('ids') ?? '1,2,3').split(',');
   const delay = params.get('delay') ?? '0';
 
-  if (ids.length > 5 || ids.some(id => !/^0*[1-9]d*$/.test(id))) {
+  if (ids.length > 5 || ids.some(id => !/^0*[1-9]\d*$/.test(id))) {
     throw new Error('Укажите в ids от 1 до 5 положительных целых чисел через запятую.');
   }
-  if (!/^d+$/.test(delay) || Number(delay) > 5000) {
+  if (!/^\d+$/.test(delay) || Number(delay) > 5000) {
     throw new Error('Укажите в delay целое число от 0 до 5000 мс.');
   }
 
